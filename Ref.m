@@ -29,7 +29,8 @@ neither does `_ref_ = Null` which simply sets a new value to the variable `_ref_
 `UnRef[]` clears all references created so far." // `Private`formatUsage;
 RefBlock::usage = "`RefBlock[_expr_]` evaluates `_expr_` and clears afterwards all \[OpenCurlyQuote]local\[CloseCurlyQuote] references set inside. \
 Any \[OpenCurlyQuote]global\[CloseCurlyQuote] reference unset and reset inside `RefBlock` is treated as local \
-and is unset on exit from `RefBlock`." // `Private`formatUsage;
+and is unset on exit from `RefBlock`.
+`RefBlock[{_var_ = _value_, \[Ellipsis]}, _expr_]` uses `Module` to localise `_var_, \[Ellipsis]`." // `Private`formatUsage;
 Refs::usage = "`Refs[]` returns the list of set references." // `Private`formatUsage;
 
 
@@ -61,7 +62,7 @@ Eval@r_Ref /; RefNullQ@r ^= Null;
 
 
 SetAttributes[RefBlock, HoldAll];
-RefBlock[vars: {___}, expr_] := Module[vars, RefBlock[expr]];
+RefBlock[vars: {___}, expr_] := RefBlock[Module[vars, expr]];
 RefBlock[expr_] := scope[
   Block[
     { SetRef },

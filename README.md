@@ -105,19 +105,15 @@ RefBlock[
 Refs[]   (* ⟶ {} *)
 ```
 
-`RefBlock` has a `Module`-like syntax, but only Refs created in the body are cleaned up:
+`RefBlock` has a `Module`-like syntax, so code above may be written using local variables as
 ```mma
-RefBlock[{ref = NewRef[1]},
-  !ref
-]   (* ⟶ 1 *)
-Refs[]   (* ⟶ {Ref[ref$3]} *)
-
-(* clear gargage *)
-UnRef[];
-
-RefBlock[{ref},
-  ref = NewRef[1];
-  !ref
-]   (* ⟶ 1 *)
+RefBlock[ {
+    ref1 = NewRef[42],
+    ref2
+  },
+  ref2 = ref1;
+  ref1 =.;
+  !ref2
+]   (* ⟶ 42 *)
 Refs[]   (* ⟶ {} *)
 ```
