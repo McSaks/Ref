@@ -4,7 +4,7 @@ BeginPackage["Ref`"]
 
 Unprotect[Evaluate[$Context<>"*"]];
 
-Unprotect/@{UpSet,Unset,Set};
+Unprotect/@{Not,Unset,Set};
 
 `Private`formatUsage[`Private`str_] := StringReplace[`Private`str,
   "`" ~~ Shortest[`Private`s__] ~~ "`" :>
@@ -15,9 +15,9 @@ Unprotect/@{UpSet,Unset,Set};
   }] <> "\),\"MR\",ShowStringCharacters->True]\)"];
 
 Ref::usage = "`Ref[_args..._]` is a handle reference to some expression that can be got via `EvalRef`" // `Private`formatUsage;
-UpSet::"Ref`usage" = "`_ref_ ^= _val_` sets the value of the referent, whereas `_ref_ = _newref_` set the reference itself." // `Private`formatUsage;
+(* UpSet::"Ref`usage" = "`_ref_ ^= _val_` sets the value of the referent, whereas `_ref_ = _newref_` set the reference itself." // `Private`formatUsage; *)
 Not::"Ref`usage" = "`!_ref_` dereferences `_ref_`." // `Private`formatUsage;
-SetRef::usage = "`SetRef[_ref_, _val_]` sets the value of the referent. Can be written as `_ref_ ^= _val_` or `!_ref_ = _val_`." // `Private`formatUsage;
+SetRef::usage = "`SetRef[_ref_, _val_]` sets the value of the referent. Can be written as `!_ref_ = _val_`." // `Private`formatUsage;
 NewRef::usage = "`NewRef[]` creates a unique null reference.
 `NewRef[_val_]` creates a reference with referent `_val_`." // `Private`formatUsage;
 EvalRef::usage = "`EvalRef[_expr_]` dereferences all references in `_expr_`. `!_ref_` dereferences only `_ref_` once." // `Private`formatUsage;
@@ -38,7 +38,7 @@ Begin["`Private`"];
 
 
 SetRef[r_Ref, val_] := Eval[r] = val;
-(r_ ^= val_) := SetRef[r, val] /; Head[r] === Ref;
+(* (r_ ^= val_) := SetRef[r, val] /; Head[r] === Ref; *)
 (! r_ = val_) := SetRef[r, val] /; Head[r] === Ref;
 ! r_Ref ^:= Eval[r];
 (* r_Ref[] := Eval[r]; *)
@@ -47,7 +47,7 @@ Eval@e_Eval := e;
 EvalRefOnce[expr_] := expr /. r_Ref :> Eval[r];
 EvalRef[expr_] := FixedPoint[EvalRefOnce, expr];
 newRef[id_: "Ref`Symbols`ref$"] := Ref[Unique[id]];
-NewRef[expr_] := With[{ref = newRef[]}, ref ^= expr; ref];
+NewRef[expr_] := With[{ref = newRef[]}, SetRef[ref, expr]; ref];
 NewRef[] := newRef[];
 RefSetQ[r_Ref] := MemberQ[Extract[#, {1, 1, 1}] & /@ DownValues[Eval], r];
 RefNullQ[r_Ref] := !RefSetQ[r];
@@ -133,7 +133,7 @@ scopeExit[finally_] := Sow[Hold[finally], scope];
 
 End[];
 
-Protect/@{UpSet,Unset,Set};
+Protect/@{Not,Unset,Set};
 Protect[Evaluate[$Context<>"*"]];
 Unprotect[Evaluate[$Context<>"$*"]];
 

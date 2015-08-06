@@ -29,8 +29,6 @@ RefNullQ[ref2]   (* ⟶ True *)
 
 __Bind__ a value:
 ```mma
-ref2 ^= 42
-(* or, equivalently *)
 !ref2 = 42   (* ⟶ 42 *)
 ```
 
@@ -53,7 +51,7 @@ ref2 = NewRef["value"]   (* ⟶ Ref[ref$2] *)
 
 (* Just the same as: *)
 ref2 = NewRef[];
-ref2 ^= "value";
+!ref2 = "value";
 ```
 
 Now we have two __distinct__ Refs:
