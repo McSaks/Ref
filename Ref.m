@@ -82,13 +82,13 @@ MakeBoxes[e : Eval@Ref[s___], form_] := With[ { args = RowBox[ Riffle[MakeBoxes[
     str_String :> StringReplace[str, "Ref`Symbols`ref$" ~~ sy_ :> sy] ] },
   InterpretationBox[
    RowBox @ {"\[LeftSkeleton]", SubscriptBox["Null", args], "\[RightSkeleton]"},
-   Unevaluated@e]];
+   e]];
 ToString[e : Eval@Ref[s___], form : _|PatternSequence[]] := "\[LeftSkeleton]Eval@Ref[" <> StringJoin@Riffle[(ToString[#, form]&) /@ {s}, ", "] <> "]\[RightSkeleton]";
 MakeBoxes[e : Ref[s___], form_] := With[ { args = RowBox[ Riffle[MakeBoxes[#, form]& /@ {s}, ","] /.
     str_String :> StringReplace[str, "Ref`Symbols`ref$" ~~ sy_ :> sy] ] },
   InterpretationBox[
    RowBox @ {"\[LeftSkeleton]", SubscriptBox["Ref", args], "\[RightSkeleton]"},
-   Unevaluated@e]];
+   e]];
 Protect @ ToString;
 
 
