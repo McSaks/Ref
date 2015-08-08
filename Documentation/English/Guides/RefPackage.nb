@@ -1,0 +1,276 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7989,        267]
+NotebookOptionsPosition[      5929,        208]
+NotebookOutlinePosition[      7367,        245]
+CellTagsIndexPosition[      7324,        242]
+WindowTitle->Ref Package
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["REF PACKAGE GUIDE", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Functions",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Functions", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Ref\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/Ref"], "\<\"NewRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/NewRef"], "\<\"EvalRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/EvalRef"], "\<\"UnRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/UnRef"], "\<\"SetRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/SetRef"], "\<\"Refs\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/Refs"], "\<\"RefBlock\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/RefBlock"], "\<\"RefSetQ\"\>":>
+       Documentation`HelpLookup["paclet:Ref/ref/RefSetQ"], "\<\"RefNullQ\"\>":>
+       Documentation`HelpLookup["paclet:Ref/ref/RefNullQ"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideFunction"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Ref Package\"\>":>
+       Documentation`HelpLookup["paclet:Ref/tutorial/RefPackage"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"GuideTutorial"]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["Ref Package", "GuideTitle",
+ CellID->942062912],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Ref"]],"paclet:Ref/ref/Ref"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "inert reference object"
+}], "GuideText",
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NewRef"]],"paclet:Ref/ref/NewRef"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "create unique reference"
+}], "GuideText",
+ CellID->698877281],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EvalRef"]],"paclet:Ref/ref/EvalRef"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "recursively dereference all references in expression"
+}], "GuideText",
+ CellID->55640909],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["!\[ThinSpace]ref"]],"paclet:Ref/ref/EvalRef"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "dereference once"
+}], "GuideText",
+ CellID->455608],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SetRef"]],"paclet:Ref/ref/SetRef"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "set reference value; alternate form: ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"!", "ref"}], " ", "=", " ", "val"}]], "InlineFormula"]
+}], "GuideText",
+ CellID->779452762],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["UnRef"]],"paclet:Ref/ref/UnRef"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "clear reference, or all existing references"
+}], "GuideText",
+ CellID->293476231],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RefSetQ"]],"paclet:Ref/ref/RefSetQ"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RefNullQ"]],"paclet:Ref/ref/RefNullQ"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "test on set/unset reference"
+}], "GuideText",
+ CellID->208069134],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RefBlock"]],"paclet:Ref/ref/RefBlock"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "localize references, clear all created references when evaluation is done"
+}], "GuideText",
+ CellID->176634893],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Refs"]],"paclet:Ref/ref/Refs"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " ",
+ "get list of all existing references"
+}], "GuideText",
+ CellID->18467161],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{750, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Ref Package",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "GuideColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Ref Package", ButtonData -> "paclet:Ref/guide/RefPackage", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> 
+  None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2015, 8, 6, 15, 42, 6.489051}", "history" -> {"", "", "", ""},
+     "context" -> "", "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Ref Package Guide", "language" -> "en", "paclet" -> "Ref Package", 
+    "status" -> "None", "summary" -> "", "synonyms" -> {}, "title" -> 
+    "Ref Package", "titlemodifier" -> "", "windowtitle" -> "Ref Package", 
+    "type" -> "Guide", "uri" -> "Ref/guide/RefPackage"}, 
+  "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "WindowsCyrillic"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[583, 21, 2025, 48, 54, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2633, 73, 53, 1, 54, "GuideTitle",
+ CellID->942062912],
+Cell[2689, 76, 287, 11, 25, "GuideText",
+ CellID->203374175],
+Cell[2979, 89, 294, 11, 25, "GuideText",
+ CellID->698877281],
+Cell[3276, 102, 324, 11, 25, "GuideText",
+ CellID->55640909],
+Cell[3603, 115, 295, 11, 25, "GuideText",
+ CellID->455608],
+Cell[3901, 128, 402, 14, 27, "GuideText",
+ CellID->779452762],
+Cell[4306, 144, 312, 11, 25, "GuideText",
+ CellID->293476231],
+Cell[4621, 157, 603, 20, 25, "GuideText",
+ CellID->208069134],
+Cell[5227, 179, 348, 11, 25, "GuideText",
+ CellID->176634893],
+Cell[5578, 192, 301, 11, 25, "GuideText",
+ CellID->18467161],
+Cell[5882, 205, 31, 0, 31, "SectionFooterSpacer"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

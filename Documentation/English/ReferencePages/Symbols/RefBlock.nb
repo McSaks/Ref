@@ -1,0 +1,753 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     21810,        744]
+NotebookOptionsPosition[     17452,        610]
+NotebookOutlinePosition[     19479,        662]
+CellTagsIndexPosition[     19394,        657]
+WindowTitle->RefBlock
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["REF PACKAGE SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"UnRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/UnRef"], "\<\"Ref\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/Ref"], "\<\"NewRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/NewRef"], "\<\"SetRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/SetRef"], "\<\"EvalRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/EvalRef"], "\<\"Refs\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/Refs"], "\<\"RefSetQ\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/RefSetQ"], "\<\"RefNullQ\"\>":>
+       Documentation`HelpLookup["paclet:Ref/ref/RefNullQ"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Ref Package\"\>":>
+       Documentation`HelpLookup["paclet:Ref/guide/RefPackage"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]"
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell[TextData[Cell["RefBlock", "ObjectName"]], "ObjectNameGrid",
+ CellID->105855407],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"RefBlock", "[", 
+       StyleBox["body", "TI"], "]"}]], "InlineFormula"],
+     "\[LineSeparator]evaluates ",
+     Cell[BoxData[
+      StyleBox["body", "TI"]], "InlineFormula"],
+     " and clears afterwards all \[OpenCurlyQuote]local\[CloseCurlyQuote] \
+references bound inside."
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"RefBlock", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           StyleBox["var", "TI"], "=", 
+           StyleBox["expr", "TI"]}], ",", "\[Ellipsis]"}], "}"}], ",", 
+        StyleBox["body", "TI"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]uses ",
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["Module"]],"paclet:ref/Module"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     " to localize variables."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->4931],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ "To use ",
+ Cell[BoxData["RefBlock"], "InlineFormula"],
+ ", you first need to load the ",
+ ButtonBox["Ref Package",
+  BaseStyle->"Link",
+  ButtonData->"paclet:Ref/guide/RefPackage"],
+ " using ",
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["Needs"]],"paclet:ref/Needs"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", "\"\<Ref`\>\"", "]"}]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->167050482],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["UnRef"]],"paclet:Ref/ref/UnRef"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is implicitly called after evaluating ",
+ Cell[BoxData[
+  StyleBox["body", "TI"]], "InlineFormula"],
+ " on any local reference",
+ StyleBox["\[ThinSpace]\[LongDash]",
+  LineBreakWithin->False],
+ "\[ThinSpace]a one bound inside and being unbound upon entering ",
+ Cell[BoxData["RefBlock"], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->134267437],
+
+Cell[TextData[{
+ "Any reference being bound before evaluating ",
+ Cell[BoxData["RefBlock"], "InlineFormula"],
+ " and rebound inside, unless unbound using ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["UnRef"]],"paclet:Ref/ref/UnRef"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ", is treated as global, so it is not cleared and has a new value upon exit \
+from ",
+ Cell[BoxData["RefBlock"], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->164994381],
+
+Cell[TextData[{
+ "Any reference unbound and rebound inside ",
+ Cell[BoxData["RefBlock"], "InlineFormula"],
+ " is treated as local and unbound again upon exit from ",
+ Cell[BoxData["RefBlock"], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->22805182],
+
+Cell[TextData[{
+ "After ",
+ Cell[BoxData[
+  RowBox[{"UnRef", "[", "]"}]], "InlineFormula"],
+ " is evaluated, all references are null, so that ",
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["Refs"]],"paclet:Ref/ref/Refs"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", "]"}]], "InlineFormula"],
+ " returns an empty list."
+}], "Notes",
+ CellID->216181578],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RefBlock"]],"paclet:Ref/ref/RefBlock"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to automatically remove bindings to all references created in\
+\[NonBreakingSpace]a\[NonBreakingSpace]code\[NonBreakingSpace]block."
+}], "Notes",
+ CellID->157205806]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->575750790],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->82214148],
+
+Cell["First, load the package:", "ExampleText"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Ref`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:="],
+
+Cell["Create global references:", "ExampleText"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"global0", "=", 
+   RowBox[{"Ref", "[", 
+    RowBox[{"global", ",", "0"}], "]"}]}], ";", 
+  RowBox[{
+   RowBox[{"!", "global0"}], "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"global1", "=", 
+   RowBox[{"Ref", "[", 
+    RowBox[{"global", ",", "1"}], "]"}]}], ";", 
+  RowBox[{
+   RowBox[{"!", "global1"}], "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"global2", "=", 
+   RowBox[{"Ref", "[", 
+    RowBox[{"global", ",", "2"}], "]"}]}], ";", 
+  RowBox[{
+   RowBox[{"!", "global2"}], "=", "2"}], ";"}]}], "Input",
+ LinebreakSemicolonWeighting->"Normal",
+ CellLabel->"In[18]:=",
+ CellID->4310960],
+
+Cell["And a null reference:", "ExampleText",
+ CellID->405201900],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"null3", "=", 
+   RowBox[{"Ref", "[", 
+    RowBox[{"null", ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellLabel->"In[21]:=",
+ CellID->607116147],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Refs"]],"paclet:Ref/ref/Refs"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " contains only bound ones:"
+}], "ExampleText",
+ CellID->120214977],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"printRefs", ":=", 
+   RowBox[{"AssociationMap", "[", 
+    RowBox[{"Not", ",", 
+     RowBox[{"Refs", "[", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", "printRefs"}], "Input",
+ CellLabel->"In[23]:=",
+ CellID->21004461],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{
+    InterpretationBox[
+     RowBox[{"\[LeftSkeleton]", 
+      SubscriptBox["Ref", 
+       RowBox[{"global", ",", "0"}]], "\[RightSkeleton]"}],
+     Ref`Ref[$CellContext`global, 0]], "\[Rule]", "0"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     RowBox[{"\[LeftSkeleton]", 
+      SubscriptBox["Ref", 
+       RowBox[{"global", ",", "1"}]], "\[RightSkeleton]"}],
+     Ref`Ref[$CellContext`global, 1]], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     RowBox[{"\[LeftSkeleton]", 
+      SubscriptBox["Ref", 
+       RowBox[{"global", ",", "2"}]], "\[RightSkeleton]"}],
+     Ref`Ref[$CellContext`global, 2]], "\[Rule]", "2"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[24]=",
+ CellID->54417204]
+}, Open  ]],
+
+Cell[TextData[{
+ "Execute ",
+ Cell[BoxData["RefBlock"], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->53714597],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RefBlock", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"local4", "=", 
+     RowBox[{"NewRef", "[", "4", "]"}]}], "}"}], ",", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"local", " ", "var"}], ",", " ", 
+     RowBox[{"local", " ", "ref"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"local5", "=", 
+     RowBox[{"Ref", "[", 
+      RowBox[{"local", ",", "5"}], "]"}]}], ";", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+      RowBox[{"global", " ", "var"}], ",", " ", 
+      RowBox[{"local", " ", "ref"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"!", "local5"}], "=", "5"}], ";", 
+    RowBox[{"(*", " ", 
+     RowBox[{"bind", " ", "local", " ", "ref"}], " ", "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"!", "global2"}], "=", "22"}], ";", 
+    RowBox[{"(*", " ", 
+     RowBox[{"rebind", " ", "global", " ", "ref"}], " ", "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"!", "local4"}], "=", "44"}], ";", 
+    RowBox[{"(*", " ", 
+     RowBox[{"rebind", " ", "local", " ", "ref"}], " ", "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"!", "global0"}], "=."}], ";", 
+    RowBox[{"(*", " ", 
+     RowBox[{"unbind", " ", "global", " ", "ref"}], " ", "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"!", "global0"}], "=", "100"}], ";", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{" ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"rebind", " ", "ex"}], "-", 
+         RowBox[{"global", " ", "ref"}]}], ",", " ", 
+        RowBox[{"now", " ", "it"}]}], "\[CloseCurlyQuote]"}], "s", " ", 
+      "local"}], " ", "*)"}], "\[IndentingNewLine]", "printRefs"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellLabel->"In[25]:=",
+ CellID->894799594],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{
+    InterpretationBox[
+     RowBox[{"\[LeftSkeleton]", 
+      SubscriptBox["Ref", "4"], "\[RightSkeleton]"}],
+     Ref`Ref[Ref`Symbols`ref$4]], "\[Rule]", "44"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     RowBox[{"\[LeftSkeleton]", 
+      SubscriptBox["Ref", 
+       RowBox[{"global", ",", "0"}]], "\[RightSkeleton]"}],
+     Ref`Ref[$CellContext`global, 0]], "\[Rule]", "100"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     RowBox[{"\[LeftSkeleton]", 
+      SubscriptBox["Ref", 
+       RowBox[{"global", ",", "1"}]], "\[RightSkeleton]"}],
+     Ref`Ref[$CellContext`global, 1]], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     RowBox[{"\[LeftSkeleton]", 
+      SubscriptBox["Ref", 
+       RowBox[{"global", ",", "2"}]], "\[RightSkeleton]"}],
+     Ref`Ref[$CellContext`global, 2]], "\[Rule]", "22"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     RowBox[{"\[LeftSkeleton]", 
+      SubscriptBox["Ref", 
+       RowBox[{"local", ",", "5"}]], "\[RightSkeleton]"}],
+     Ref`Ref[$CellContext`local, 5]], "\[Rule]", "5"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[25]=",
+ CellID->306645173]
+}, Open  ]],
+
+Cell["Now, all local references are cleared:", "ExampleText",
+ CellID->671904465],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["printRefs"], "Input",
+ CellLabel->"In[26]:=",
+ CellID->541805548],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{
+    InterpretationBox[
+     RowBox[{"\[LeftSkeleton]", 
+      SubscriptBox["Ref", 
+       RowBox[{"global", ",", "1"}]], "\[RightSkeleton]"}],
+     Ref`Ref[$CellContext`global, 1]], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    InterpretationBox[
+     RowBox[{"\[LeftSkeleton]", 
+      SubscriptBox["Ref", 
+       RowBox[{"global", ",", "2"}]], "\[RightSkeleton]"}],
+     Ref`Ref[$CellContext`global, 2]], "\[Rule]", "22"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[26]=",
+ CellID->72516782]
+}, Open  ]],
+
+Cell[TextData[{
+ "Note that ",
+ Cell[BoxData["global0"], "InlineFormula"],
+ " became local and is removed. Also note that ",
+ Cell[BoxData["global2"], "InlineFormula"],
+ " changed its value."
+}], "ExampleText",
+ CellID->112575384]
+}, Open  ]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->21447],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["UnRef"]],"paclet:Ref/ref/UnRef"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SetRef"]],"paclet:Ref/ref/SetRef"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RefNullQ"]],"paclet:Ref/ref/RefNullQ"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RefSetQ"]],"paclet:Ref/ref/RefSetQ"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["EvalRef"]],"paclet:Ref/ref/EvalRef"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Ref"]],"paclet:Ref/ref/Ref"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NewRef"]],"paclet:Ref/ref/NewRef"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Refs"]],"paclet:Ref/ref/Refs"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->1084]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->169421678],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Ref Package"]],"paclet:Ref/guide/RefPackage"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->1]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+ScreenStyleEnvironment->"Working",
+WindowSize->{724, 750},
+WindowMargins->{{84, Automatic}, {2, Automatic}},
+WindowTitle->"RefBlock",
+DockedCells->FEPrivate`FrontEndResource[
+ "FEExpressions", "HelpViewerToolbar"],
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      ButtonBox[
+      "Ref Package", ButtonData -> "paclet:Ref/guide/RefPackage", 
+       BaseStyle -> {"Link", "DockedLinkTrail"}]}}, ColumnAlignments -> Left],
+   "HasOptions" -> False, "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, 
+  "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2015, 8, 8, 14, 08, 0}", "history" -> {"XX", "", "", ""}, 
+    "context" -> "Ref`", 
+    "keywords" -> {"RefBlock", "reference block", "localize references"}, 
+    "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
+     "label" -> "Ref Package Symbol", "language" -> "en", "paclet" -> 
+    "Ref Package", "status" -> "None", "summary" -> 
+    "RefBlock clears all references bound during evaluation", 
+    "synonyms" -> {}, "title" -> "RefBlock", "titlemodifier" -> "", 
+    "windowtitle" -> "RefBlock", "type" -> "Symbol", "uri" -> 
+    "Ref/ref/RefBlock"}, "SearchTextTranslated" -> ""},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"Wolfram"}, "Reference.nb", CharacterEncoding -> 
+       "WindowsCyrillic"]]]}, Visible -> False, FrontEndVersion -> 
+  "10.1 for Microsoft Windows (64-bit) (March 23, 2015)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[7076, 235, 387, 15, 36, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->575750790]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 19251, 650}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[580, 21, 2029, 49, 54, "AnchorBarGrid",
+ CellID->1],
+Cell[2612, 72, 84, 1, 49, "ObjectNameGrid",
+ CellID->105855407],
+Cell[CellGroupData[{
+Cell[2721, 77, 1097, 34, 166, "Usage",
+ CellID->4931],
+Cell[CellGroupData[{
+Cell[3843, 115, 730, 24, 36, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1],
+Cell[4576, 141, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[4610, 143, 438, 16, 37, "Notes",
+ CellID->167050482],
+Cell[5051, 161, 512, 16, 58, "Notes",
+ CellID->134267437],
+Cell[5566, 179, 476, 14, 78, "Notes",
+ CellID->164994381],
+Cell[6045, 195, 248, 7, 58, "Notes",
+ CellID->22805182],
+Cell[6296, 204, 379, 13, 37, "Notes",
+ CellID->216181578],
+Cell[6678, 219, 349, 10, 37, "Notes",
+ CellID->157205806]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7076, 235, 387, 15, 36, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->575750790],
+Cell[CellGroupData[{
+Cell[7488, 254, 194, 6, 27, "ExampleSection",
+ CellID->82214148],
+Cell[7685, 262, 47, 0, 38, "ExampleText"],
+Cell[7735, 264, 92, 2, 32, "Input"],
+Cell[7830, 268, 48, 0, 38, "ExampleText"],
+Cell[7881, 270, 662, 21, 75, "Input",
+ CellID->4310960],
+Cell[8546, 293, 64, 1, 38, "ExampleText",
+ CellID->405201900],
+Cell[8613, 296, 174, 6, 32, "Input",
+ CellID->607116147],
+Cell[8790, 304, 232, 8, 41, "ExampleText",
+ CellID->120214977],
+Cell[CellGroupData[{
+Cell[9047, 316, 258, 8, 54, "Input",
+ CellID->21004461],
+Cell[9308, 326, 788, 23, 45, "Output",
+ CellID->54417204]
+}, Open  ]],
+Cell[10111, 352, 116, 5, 41, "ExampleText",
+ CellID->53714597],
+Cell[CellGroupData[{
+Cell[10252, 361, 1780, 51, 201, "Input",
+ CellID->894799594],
+Cell[12035, 414, 1189, 34, 67, "Output",
+ CellID->306645173]
+}, Open  ]],
+Cell[13239, 451, 81, 1, 38, "ExampleText",
+ CellID->671904465],
+Cell[CellGroupData[{
+Cell[13345, 456, 79, 2, 32, "Input",
+ CellID->541805548],
+Cell[13427, 460, 571, 17, 45, "Output",
+ CellID->72516782]
+}, Open  ]],
+Cell[14013, 480, 230, 7, 59, "ExampleText",
+ CellID->112575384]
+}, Open  ]],
+Cell[14258, 490, 31, 0, 31, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14326, 495, 265, 12, 36, "SeeAlsoSection",
+ CellID->21447],
+Cell[14594, 509, 2305, 70, 65, "SeeAlso",
+ CellID->1084]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16936, 584, 277, 12, 36, "MoreAboutSection",
+ CellID->169421678],
+Cell[17216, 598, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[17250, 600, 160, 5, 23, "MoreAbout",
+ CellID->1]
+}, Open  ]],
+Cell[17425, 608, 23, 0, 47, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
