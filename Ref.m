@@ -16,7 +16,7 @@ Unprotect/@{Not,Unset,Set};
 
 Ref::usage = "`Ref[_args..._]` is a handle reference to some expression that can be got via `EvalRef`" // `Private`formatUsage;
 (* UpSet::"Ref`usage" = "`_ref_ ^= _val_` sets the value of the referent, whereas `_ref_ = _newref_` set the reference itself." // `Private`formatUsage; *)
-Not::"Ref`usage" = "`!_ref_` dereferences `_ref_`." // `Private`formatUsage;
+DeRef::usage = "`DeRef[_ref_]` or `!_ref_` dereferences `_ref_`." // `Private`formatUsage;
 SetRef::usage = "`SetRef[_ref_, _val_]` sets the value of the referent. Can be written as `!_ref_ = _val_`." // `Private`formatUsage;
 NewRef::usage = "`NewRef[]` creates a unique null reference.
 `NewRef[_val_]` creates a reference with referent `_val_`." // `Private`formatUsage;
@@ -40,6 +40,7 @@ Begin["`Private`"];
 SetRef[r_Ref, val_] := Eval[r] = val;
 (* (r_ ^= val_) := SetRef[r, val] /; Head[r] === Ref; *)
 (! r_ = val_) := SetRef[r, val] /; Head[r] === Ref;
+DeRef[r_Ref] := Eval[r];
 ! r_Ref ^:= Eval[r];
 (* r_Ref[] := Eval[r]; *)
 Unset /: (! r_ =.) := UnRef[r] /; Head[r] === Ref;
@@ -98,11 +99,16 @@ a[___] /; Message[a::args, a] = $Failed;
 ],{aa,{UnRef,RefBlock}}];
 EvalRef[args___] /; Message[EvalRef::argx, EvalRef, Length@Hold@args] = $Failed;
 SetRef[args_] /; Message[EvalRef::argr, EvalRef, 2] = $Failed;
-SetRef[args_, _] /; Message[EvalRef::args, EvalRef] = $Failed;
+e: SetRef[args_, _] /; Message[EvalRef::refnce, HoldForm[e], 1] = $Failed;
 SetRef[args:PatternSequence[]|PatternSequence[_,_,__]] /; Message[EvalRef::argrx, EvalRef, Length@Hold@args, 2] = $Failed;
 NewRef[PatternSequence[_,__]] /; Message[NewRef::argt, EvalRef, Length@Hold@args, 0, 1] = $Failed;
 Refs[arg1_, args__] /; Message[Refs::argrx, Refs, Length@Hold[arg1, args], 0] := $Failed;
 Refs[arg1_] /; Message[Refs::argr, Refs, 0] := $Failed;
+e: DeRef[arg_] /; Message[DeRef::refnce, HoldForm[e], 1] = $Failed;
+DeRef[] /; Message[DeRef::argx, DeRef, Length@Hold@args] = $Failed;
+DeRef[arg1_, args__] /; Message[DeRef::argx, DeRef, Length@Hold@args] = $Failed;
+
+General::refnce = "Ref object is expected at position `2` in `1`.";
 
 
 (* copy from my ScopeExit`, see https://github.com/McSaks/wl-init/blob/master/ScopeExit.m *)
