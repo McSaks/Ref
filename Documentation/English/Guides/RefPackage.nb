@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7989,        267]
-NotebookOptionsPosition[      5929,        208]
-NotebookOutlinePosition[      7367,        245]
-CellTagsIndexPosition[      7324,        242]
+NotebookDataLength[      8149,        273]
+NotebookOptionsPosition[      6089,        214]
+NotebookOutlinePosition[      7527,        251]
+CellTagsIndexPosition[      7484,        248]
 WindowTitle->Ref Package
 WindowFrame->Normal*)
 
@@ -109,14 +109,20 @@ Cell[TextData[{
  " ",
  StyleBox["\[LongDash]", "GuideEmDash"],
  " ",
- "recursively dereference all references in expression"
+ "repeatedly dereference all references in expression"
 }], "GuideText",
  CellID->55640909],
 
 Cell[TextData[{
  Cell[BoxData[
   TemplateBox[{Cell[
-     TextData["!\[ThinSpace]ref"]],"paclet:Ref/ref/EvalRef"},
+     TextData["DeRef"]],"paclet:Ref/ref/DeRef"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ " or ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["!\[ThinSpace]ref"]],"paclet:ref/Not"},
    "RefLink",
    BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
  " ",
@@ -253,21 +259,21 @@ Cell[2689, 76, 287, 11, 25, "GuideText",
  CellID->203374175],
 Cell[2979, 89, 294, 11, 25, "GuideText",
  CellID->698877281],
-Cell[3276, 102, 324, 11, 25, "GuideText",
+Cell[3276, 102, 323, 11, 25, "GuideText",
  CellID->55640909],
-Cell[3603, 115, 295, 11, 25, "GuideText",
+Cell[3602, 115, 456, 17, 25, "GuideText",
  CellID->455608],
-Cell[3901, 128, 402, 14, 27, "GuideText",
+Cell[4061, 134, 402, 14, 27, "GuideText",
  CellID->779452762],
-Cell[4306, 144, 312, 11, 25, "GuideText",
+Cell[4466, 150, 312, 11, 25, "GuideText",
  CellID->293476231],
-Cell[4621, 157, 603, 20, 25, "GuideText",
+Cell[4781, 163, 603, 20, 25, "GuideText",
  CellID->208069134],
-Cell[5227, 179, 348, 11, 25, "GuideText",
+Cell[5387, 185, 348, 11, 25, "GuideText",
  CellID->176634893],
-Cell[5578, 192, 301, 11, 25, "GuideText",
+Cell[5738, 198, 301, 11, 25, "GuideText",
  CellID->18467161],
-Cell[5882, 205, 31, 0, 31, "SectionFooterSpacer"]
+Cell[6042, 211, 31, 0, 31, "SectionFooterSpacer"]
 }, Open  ]]
 }
 ]

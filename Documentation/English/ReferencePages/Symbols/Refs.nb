@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17828,        620]
-NotebookOptionsPosition[     13532,        487]
-NotebookOutlinePosition[     15627,        541]
-CellTagsIndexPosition[     15542,        536]
+NotebookDataLength[     18454,        641]
+NotebookOptionsPosition[     14180,        507]
+NotebookOutlinePosition[     16195,        560]
+CellTagsIndexPosition[     16110,        555]
 WindowTitle->Refs
 WindowFrame->Normal*)
 
@@ -35,7 +35,8 @@ Cell[BoxData[GridBox[{
         StripOnInput->False], {"\<\"Ref\"\>":>Documentation`HelpLookup[
        "paclet:Ref/ref/Ref"], "\<\"NewRef\"\>":>Documentation`HelpLookup[
        "paclet:Ref/ref/NewRef"], "\<\"EvalRef\"\>":>Documentation`HelpLookup[
-       "paclet:Ref/ref/EvalRef"], "\<\"UnRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/EvalRef"], "\<\"DeRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/DeRef"], "\<\"UnRef\"\>":>Documentation`HelpLookup[
        "paclet:Ref/ref/UnRef"], "\<\"SetRef\"\>":>Documentation`HelpLookup[
        "paclet:Ref/ref/SetRef"], "\<\"RefBlock\"\>":>Documentation`HelpLookup[
        "paclet:Ref/ref/RefBlock"], "\<\"RefSetQ\"\>":>
@@ -147,7 +148,17 @@ Cell[TextData[{
    BaseStyle->"InlineFormula"]], "InlineFormula"],
  " are not included in the list."
 }], "Notes",
- CellID->22805182]
+ CellID->22805182],
+
+Cell[TextData[{
+ "One can use ",
+ Cell[BoxData[
+  RowBox[{"AssociationMap", "[", 
+   RowBox[{"DeRef", ",", 
+    RowBox[{"Refs", "[", "]"}]}], "]"}]], "InlineFormula"],
+ " to get the association of all references with their bound values."
+}], "Notes",
+ CellID->745248683]
 }, Open  ]]
 }, Open  ]],
 
@@ -274,7 +285,7 @@ Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{"EvalRef", "[", 
   RowBox[{"Refs", "[", "]"}], "]"}], "\[IndentingNewLine]", 
- RowBox[{"Not", "/@", 
+ RowBox[{"DeRef", "/@", 
   RowBox[{"Refs", "[", "]"}]}]}], "Input",
  CellLabel->"In[15]:=",
  CellID->365329282],
@@ -326,7 +337,7 @@ Cell[BoxData[{
        RowBox[{"NewRef", "[", "\"\<XXX\>\"", "]"}]}]}], "}"}]}]}], 
   "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
  RowBox[{"AssociationMap", "[", 
-  RowBox[{"Not", ",", 
+  RowBox[{"DeRef", ",", 
    RowBox[{"Refs", "[", "]"}]}], "]"}]}], "Input",
  CellLabel->"In[22]:=",
  CellID->826687291],
@@ -406,6 +417,15 @@ Cell[TextData[{
  Cell[BoxData[
   TemplateBox[{Cell[
      TextData["EvalRef"]],"paclet:Ref/ref/EvalRef"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["DeRef"]],"paclet:Ref/ref/DeRef"},
    "RefLink",
    BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
  "\[NonBreakingSpace]",
@@ -517,10 +537,9 @@ StyleDefinitions->Notebook[{
     StyleData[
     StyleDefinitions -> 
      FrontEnd`FileName[{"Wolfram"}, "Reference.nb", CharacterEncoding -> 
-       "WindowsCyrillic"]]]}, WindowSize -> {775, 659}, 
-  WindowMargins -> {{0, Automatic}, {Automatic, 0}}, Visible -> False, 
-  FrontEndVersion -> "10.1 for Microsoft Windows (64-bit) (March 23, 2015)", 
-  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+       "WindowsCyrillic"]]]}, Visible -> False, FrontEndVersion -> 
+  "10.1 for Microsoft Windows (64-bit) (March 23, 2015)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
 ]
 (* End of Notebook Content *)
 
@@ -528,100 +547,102 @@ StyleDefinitions->Notebook[{
 (*CellTagsOutline
 CellTagsIndex->{
  "PrimaryExamplesSection"->{
-  Cell[4698, 155, 387, 15, 36, "PrimaryExamplesSection",
+  Cell[5046, 166, 387, 15, 36, "PrimaryExamplesSection",
    CellTags->"PrimaryExamplesSection",
    CellID->575750790]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"PrimaryExamplesSection", 15399, 529}
+ {"PrimaryExamplesSection", 15967, 548}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[576, 21, 2037, 49, 54, "AnchorBarGrid",
+Cell[576, 21, 2112, 50, 54, "AnchorBarGrid",
  CellID->1],
-Cell[2616, 72, 26, 0, 49, "ObjectName"],
+Cell[2691, 73, 26, 0, 49, "ObjectName"],
 Cell[CellGroupData[{
-Cell[2667, 76, 382, 12, 93, "Usage",
+Cell[2742, 77, 382, 12, 93, "Usage",
  CellID->4931],
 Cell[CellGroupData[{
-Cell[3074, 92, 730, 24, 36, "NotesSection",
+Cell[3149, 93, 730, 24, 36, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
  CellID->1],
-Cell[3807, 118, 31, 0, 14, "SectionHeaderSpacer"],
-Cell[3841, 120, 434, 16, 37, "Notes",
+Cell[3882, 119, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[3916, 121, 434, 16, 37, "Notes",
  CellID->167050482],
-Cell[4278, 138, 371, 11, 55, "Notes",
- CellID->22805182]
+Cell[4353, 139, 371, 11, 55, "Notes",
+ CellID->22805182],
+Cell[4727, 152, 270, 8, 55, "Notes",
+ CellID->745248683]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4698, 155, 387, 15, 36, "PrimaryExamplesSection",
+Cell[5046, 166, 387, 15, 36, "PrimaryExamplesSection",
  CellTags->"PrimaryExamplesSection",
  CellID->575750790],
 Cell[CellGroupData[{
-Cell[5110, 174, 194, 6, 27, "ExampleSection",
+Cell[5458, 185, 194, 6, 27, "ExampleSection",
  CellID->82214148],
-Cell[5307, 182, 47, 0, 38, "ExampleText"],
-Cell[5357, 184, 92, 2, 32, "Input"],
-Cell[5452, 188, 62, 0, 38, "ExampleText"],
+Cell[5655, 193, 47, 0, 38, "ExampleText"],
+Cell[5705, 195, 92, 2, 32, "Input"],
+Cell[5800, 199, 62, 0, 38, "ExampleText"],
 Cell[CellGroupData[{
-Cell[5539, 192, 326, 9, 75, "Input",
+Cell[5887, 203, 326, 9, 75, "Input",
  CellID->4310960],
-Cell[5868, 203, 279, 8, 43, "Output",
+Cell[6216, 214, 279, 8, 43, "Output",
  CellID->90284182],
-Cell[6150, 213, 198, 6, 43, "Output",
+Cell[6498, 224, 198, 6, 43, "Output",
  CellID->89266116],
-Cell[6351, 221, 88, 3, 43, "Output",
+Cell[6699, 232, 88, 3, 43, "Output",
  CellID->365180810]
 }, Open  ]],
-Cell[6454, 227, 72, 1, 38, "ExampleText",
+Cell[6802, 238, 72, 1, 38, "ExampleText",
  CellID->139755158],
 Cell[CellGroupData[{
-Cell[6551, 232, 407, 13, 96, "Input",
+Cell[6899, 243, 407, 13, 96, "Input",
  CellID->390723314],
-Cell[6961, 247, 620, 18, 43, "Output",
+Cell[7309, 258, 620, 18, 43, "Output",
  CellID->224843081]
 }, Open  ]],
-Cell[7596, 268, 60, 1, 38, "ExampleText",
+Cell[7944, 279, 60, 1, 38, "ExampleText",
  CellID->415316241],
 Cell[CellGroupData[{
-Cell[7681, 273, 211, 6, 54, "Input",
+Cell[8029, 284, 213, 6, 54, "Input",
  CellID->365329282],
-Cell[7895, 281, 161, 5, 43, "Output",
+Cell[8245, 292, 161, 5, 43, "Output",
  CellID->151130298],
-Cell[8059, 288, 160, 5, 43, "Output",
+Cell[8409, 299, 160, 5, 43, "Output",
  CellID->70958307]
 }, Open  ]],
-Cell[8234, 296, 286, 8, 41, "ExampleText",
+Cell[8584, 307, 286, 8, 41, "ExampleText",
  CellID->409050283],
 Cell[CellGroupData[{
-Cell[8545, 308, 737, 23, 117, "Input",
+Cell[8895, 319, 739, 23, 117, "Input",
  CellID->826687291],
-Cell[9285, 333, 205, 5, 43, "Output",
+Cell[9637, 344, 205, 5, 43, "Output",
  CellID->504311318],
-Cell[9493, 340, 810, 23, 43, "Output",
+Cell[9845, 351, 810, 23, 43, "Output",
  CellID->61600439]
 }, Open  ]]
 }, Open  ]],
-Cell[10330, 367, 31, 0, 31, "SectionFooterSpacer"]
+Cell[10682, 378, 31, 0, 31, "SectionFooterSpacer"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10398, 372, 265, 12, 36, "SeeAlsoSection",
+Cell[10750, 383, 265, 12, 36, "SeeAlsoSection",
  CellID->21447],
-Cell[10666, 386, 2313, 70, 65, "SeeAlso",
+Cell[11018, 397, 2609, 79, 65, "SeeAlso",
  CellID->1084]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13016, 461, 277, 12, 36, "MoreAboutSection",
+Cell[13664, 481, 277, 12, 36, "MoreAboutSection",
  CellID->169421678],
-Cell[13296, 475, 31, 0, 14, "SectionHeaderSpacer"],
-Cell[13330, 477, 160, 5, 23, "MoreAbout",
+Cell[13944, 495, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[13978, 497, 160, 5, 23, "MoreAbout",
  CellID->1]
 }, Open  ]],
-Cell[13505, 485, 23, 0, 47, "FooterCell"]
+Cell[14153, 505, 23, 0, 47, "FooterCell"]
 }
 ]
 *)

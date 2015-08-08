@@ -10,11 +10,11 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     18166,        660]
-NotebookOptionsPosition[     13583,        513]
-NotebookOutlinePosition[     15609,        566]
-CellTagsIndexPosition[     15524,        561]
-WindowTitle->SetRef
+NotebookDataLength[     18183,        660]
+NotebookOptionsPosition[     13589,        513]
+NotebookOutlinePosition[     15626,        566]
+CellTagsIndexPosition[     15541,        561]
+WindowTitle->SetRef (! =)
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -86,7 +86,7 @@ Cell[TextData[{
     DocumentationBuild`Make`Private`translationlang$$ = FrontEnd`CurrentValue[
     
      FrontEndObject[
-      LinkObject["h32mu_shm", 186, 3]], "Language", "English"]}, 
+      LinkObject["mz4rb_shm", 190, 3]], "Language", "English"]}, 
     DynamicBox[ToBoxes[
      DocumentationBuild`Make`Private`translationlang$$ = 
        FrontEnd`CurrentValue[$FrontEnd, "Language", "English"]; 
@@ -515,7 +515,7 @@ Saveable->False,
 ScreenStyleEnvironment->"Working",
 WindowSize->{725, 750},
 WindowMargins->{{377, Automatic}, {-5, Automatic}},
-WindowTitle->"SetRef",
+WindowTitle->"SetRef (! =)",
 DockedCells->FEPrivate`FrontEndResource[
  "FEExpressions", "HelpViewerToolbar"],
 TaggingRules->{
@@ -534,7 +534,7 @@ TaggingRules->{
     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
      "label" -> "Ref Package Symbol", "language" -> "en", "paclet" -> 
     "Ref Package", "status" -> "None", "summary" -> 
-    "SetRef binds value to the reference", "synonyms" -> {}, "title" -> 
+    "SetRef binds value to the reference", "synonyms" -> {"! ="}, "title" -> 
     "SetRef", "titlemodifier" -> "", "windowtitle" -> "SetRef", "type" -> 
     "Symbol", "uri" -> "Ref/ref/SetRef"}, "SearchTextTranslated" -> ""},
 FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
@@ -553,115 +553,115 @@ StyleDefinitions->Notebook[{
 (*CellTagsOutline
 CellTagsIndex->{
  "PrimaryExamplesSection"->{
-  Cell[6800, 224, 387, 15, 36, "PrimaryExamplesSection",
+  Cell[6806, 224, 387, 15, 36, "PrimaryExamplesSection",
    CellTags->"PrimaryExamplesSection",
    CellID->575750790]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"PrimaryExamplesSection", 15381, 554}
+ {"PrimaryExamplesSection", 15398, 554}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[578, 21, 2033, 49, 54, "AnchorBarGrid",
+Cell[584, 21, 2033, 49, 54, "AnchorBarGrid",
  CellID->1],
-Cell[2614, 72, 1315, 35, 55, "ObjectNameGrid",
+Cell[2620, 72, 1315, 35, 55, "ObjectNameGrid",
  CellID->105855407],
 Cell[CellGroupData[{
-Cell[3954, 111, 802, 27, 163, "Usage",
+Cell[3960, 111, 802, 27, 163, "Usage",
  CellID->4931],
 Cell[CellGroupData[{
-Cell[4781, 142, 730, 24, 36, "NotesSection",
+Cell[4787, 142, 730, 24, 36, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
  CellID->1],
-Cell[5514, 168, 31, 0, 14, "SectionHeaderSpacer"],
-Cell[5548, 170, 436, 16, 37, "Notes",
+Cell[5520, 168, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[5554, 170, 436, 16, 37, "Notes",
  CellID->167050482],
-Cell[5987, 188, 618, 24, 55, "Notes",
+Cell[5993, 188, 618, 24, 55, "Notes",
  CellID->134267437],
-Cell[6608, 214, 143, 4, 37, "Notes",
+Cell[6614, 214, 143, 4, 37, "Notes",
  CellID->22805182]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6800, 224, 387, 15, 36, "PrimaryExamplesSection",
+Cell[6806, 224, 387, 15, 36, "PrimaryExamplesSection",
  CellTags->"PrimaryExamplesSection",
  CellID->575750790],
 Cell[CellGroupData[{
-Cell[7212, 243, 194, 6, 27, "ExampleSection",
+Cell[7218, 243, 194, 6, 27, "ExampleSection",
  CellID->82214148],
-Cell[7409, 251, 47, 0, 38, "ExampleText"],
-Cell[7459, 253, 92, 2, 32, "Input"],
-Cell[7554, 257, 47, 0, 38, "ExampleText"],
-Cell[7604, 259, 188, 6, 54, "Input",
+Cell[7415, 251, 47, 0, 38, "ExampleText"],
+Cell[7465, 253, 92, 2, 32, "Input"],
+Cell[7560, 257, 47, 0, 38, "ExampleText"],
+Cell[7610, 259, 188, 6, 54, "Input",
  CellID->4310960],
-Cell[7795, 267, 57, 1, 38, "ExampleText",
+Cell[7801, 267, 57, 1, 38, "ExampleText",
  CellID->81751896],
 Cell[CellGroupData[{
-Cell[7877, 272, 112, 4, 32, "Input",
+Cell[7883, 272, 112, 4, 32, "Input",
  CellID->64792066],
-Cell[7992, 278, 72, 2, 43, "Output",
+Cell[7998, 278, 72, 2, 43, "Output",
  CellID->156866985]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8101, 285, 89, 3, 32, "Input",
+Cell[8107, 285, 89, 3, 32, "Input",
  CellID->301889892],
-Cell[8193, 290, 71, 2, 43, "Output",
+Cell[8199, 290, 71, 2, 43, "Output",
  CellID->75651222]
 }, Open  ]],
-Cell[8279, 295, 73, 1, 38, "ExampleText",
+Cell[8285, 295, 73, 1, 38, "ExampleText",
  CellID->200270147],
 Cell[CellGroupData[{
-Cell[8377, 300, 161, 6, 32, "Input",
+Cell[8383, 300, 161, 6, 32, "Input",
  CellID->261357424],
-Cell[8541, 308, 71, 2, 43, "Output",
+Cell[8547, 308, 71, 2, 43, "Output",
  CellID->22328519]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8649, 315, 145, 5, 32, "Input",
+Cell[8655, 315, 145, 5, 32, "Input",
  CellID->65158182],
-Cell[8797, 322, 128, 4, 43, "Output",
+Cell[8803, 322, 128, 4, 43, "Output",
  CellID->56264309]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8962, 331, 121, 3, 6, "ExampleDelimiter",
+Cell[8968, 331, 121, 3, 6, "ExampleDelimiter",
  CellID->16657],
-Cell[9086, 336, 112, 3, 32, "Input",
+Cell[9092, 336, 112, 3, 32, "Input",
  CellID->154105732],
-Cell[9201, 341, 151, 5, 41, "ExampleText",
+Cell[9207, 341, 151, 5, 41, "ExampleText",
  CellID->877451957],
 Cell[CellGroupData[{
-Cell[9377, 350, 287, 9, 54, "Input",
+Cell[9383, 350, 287, 9, 54, "Input",
  CellID->503010603],
-Cell[9667, 361, 121, 4, 43, "Output",
+Cell[9673, 361, 121, 4, 43, "Output",
  CellID->17794989]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9825, 370, 395, 12, 75, "Input",
+Cell[9831, 370, 395, 12, 75, "Input",
  CellID->437630785],
-Cell[10223, 384, 123, 4, 43, "Output",
+Cell[10229, 384, 123, 4, 43, "Output",
  CellID->254733185]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
-Cell[10385, 393, 31, 0, 31, "SectionFooterSpacer"]
+Cell[10391, 393, 31, 0, 31, "SectionFooterSpacer"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10453, 398, 265, 12, 36, "SeeAlsoSection",
+Cell[10459, 398, 265, 12, 36, "SeeAlsoSection",
  CellID->21447],
-Cell[10721, 412, 2309, 70, 65, "SeeAlso",
+Cell[10727, 412, 2309, 70, 65, "SeeAlso",
  CellID->1084]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13067, 487, 277, 12, 36, "MoreAboutSection",
+Cell[13073, 487, 277, 12, 36, "MoreAboutSection",
  CellID->169421678],
-Cell[13347, 501, 31, 0, 14, "SectionHeaderSpacer"],
-Cell[13381, 503, 160, 5, 23, "MoreAbout",
+Cell[13353, 501, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[13387, 503, 160, 5, 23, "MoreAbout",
  CellID->1]
 }, Open  ]],
-Cell[13556, 511, 23, 0, 47, "FooterCell"]
+Cell[13562, 511, 23, 0, 47, "FooterCell"]
 }
 ]
 *)
