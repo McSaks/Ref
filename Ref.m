@@ -4,7 +4,7 @@ BeginPackage["Ref`"]
 
 Unprotect[Evaluate[$Context<>"*"]];
 
-Unprotect/@{Not,Unset,Set};
+Unprotect/@($protect={Not,Unset,Set});
 
 `Private`formatUsage[`Private`str_] := StringReplace[`Private`str,
   "`" ~~ Shortest[`Private`s__] ~~ "`" :>
@@ -143,7 +143,7 @@ scopeExit[finally_] := Sow[Hold[finally], scope];
 
 End[];
 
-Protect/@{Not,Unset,Set};
+Protect/@$protect;
 Protect[Evaluate[$Context<>"*"]];
 Unprotect[Evaluate[$Context<>"$*"]];
 
