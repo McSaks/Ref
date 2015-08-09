@@ -1,10 +1,11 @@
 Paclet[
 Name -> "Ref",
-Version -> "1.0.0",
+Version -> "1.1.0",
 MathematicaVersion -> "9+",
 Extensions -> {{
     "Documentation",
     Resources -> {
+        "Tutorials/RefPackage",
         "Guides/RefPackage",
         "ReferencePages/Symbols/Ref",
         "ReferencePages/Symbols/NewRef",

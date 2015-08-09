@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     22169,        754]
+NotebookDataLength[     22187,        754]
 NotebookOptionsPosition[     17819,        620]
-NotebookOutlinePosition[     19828,        672]
-CellTagsIndexPosition[     19743,        667]
+NotebookOutlinePosition[     19846,        672]
+CellTagsIndexPosition[     19761,        667]
 WindowTitle->RefBlock
 WindowFrame->Normal*)
 
@@ -627,22 +627,22 @@ DockedCells->FEPrivate`FrontEndResource[
 TaggingRules->{
  "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
   GridBox[{{
-      RowBox[{
-        ButtonBox[
-        "Ref Package", ButtonData -> "paclet:Ref/guide/RefPackage", 
-         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
-    Left], "HasOptions" -> False, "ExampleCounter" -> 2, 
-  "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
+      ButtonBox[
+      "Ref Package", ButtonData -> "paclet:Ref/guide/RefPackage", 
+       BaseStyle -> {"Link", "DockedLinkTrail"}]}}, ColumnAlignments -> Left],
+   "HasOptions" -> False, "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, 
+  "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2015, 8, 8, 16, 13, 0}", "history" -> {"XX", "", "", ""}, 
+   "built" -> "{2015, 8, 8, 14, 08, 0}", "history" -> {"XX", "", "", ""}, 
     "context" -> "Ref`", 
-    "keywords" -> {"DeRef", "evaluate reference", "dereference"}, 
+    "keywords" -> {"RefBlock", "reference block", "localize references"}, 
     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
      "label" -> "Ref Package Symbol", "language" -> "en", "paclet" -> 
     "Ref Package", "status" -> "None", "summary" -> 
-    "DeRef dereferences a reference", "synonyms" -> {"!"}, "title" -> "DeRef",
-     "titlemodifier" -> "", "windowtitle" -> "DeRef", "type" -> "Symbol", 
-    "uri" -> "Ref/ref/DeRef"}, "SearchTextTranslated" -> ""},
+    "RefBlock clears all references bound during evaluation", 
+    "synonyms" -> {}, "title" -> "RefBlock", "titlemodifier" -> "", 
+    "windowtitle" -> "RefBlock", "type" -> "Symbol", "uri" -> 
+    "Ref/ref/RefBlock"}, "SearchTextTranslated" -> ""},
 FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
 StyleDefinitions->Notebook[{
    Cell[
@@ -666,7 +666,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"PrimaryExamplesSection", 19600, 660}
+ {"PrimaryExamplesSection", 19618, 660}
  }
 *)
 (*NotebookFileOutline
