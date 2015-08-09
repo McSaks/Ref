@@ -32,6 +32,7 @@ Any \[OpenCurlyQuote]global\[CloseCurlyQuote] reference unset and reset inside `
 and is unset on exit from `RefBlock`.
 `RefBlock[{_var_ = _value_, \[Ellipsis]}, _expr_]` uses `Module` to localise `_var_, \[Ellipsis]`." // `Private`formatUsage;
 Refs::usage = "`Refs[]` returns the list of set references." // `Private`formatUsage;
+RefsAssociation::usage = "`RefsAssociation[]` returns association of set references with their values." // `Private`formatUsage;
 
 
 Begin["`Private`"];
@@ -58,6 +59,7 @@ UnRef[r_Ref] := (DownValues[Eval] = DeleteCases[DownValues[Eval], HoldPattern[
    Verbatim[HoldPattern] [Eval[r]] :> _
   ]];);
 Refs[] := Most[Extract[#, {1, 1, 1}] & /@ DownValues[Ref`Private`Eval]];
+RefsAssociation[] := AssociationMap[DeRef, Refs[]];
 
 Eval@r_Ref /; RefNullQ@r ^= Null;
 
@@ -104,6 +106,8 @@ SetRef[args:PatternSequence[]|PatternSequence[_,_,__]] /; Message[EvalRef::argrx
 NewRef[PatternSequence[_,__]] /; Message[NewRef::argt, EvalRef, Length@Hold@args, 0, 1] = $Failed;
 Refs[arg1_, args__] /; Message[Refs::argrx, Refs, Length@Hold[arg1, args], 0] := $Failed;
 Refs[arg1_] /; Message[Refs::argr, Refs, 0] := $Failed;
+RefsAssociation[arg1_, args__] /; Message[RefsAssociation::argrx, RefsAssociation, Length@Hold[arg1, args], 0] := $Failed;
+RefsAssociation[arg1_] /; Message[RefsAssociation::argr, Refs, 0] := $Failed;
 e: DeRef[arg_] /; Message[DeRef::refnce, HoldForm[e], 1] = $Failed;
 DeRef[] /; Message[DeRef::argx, DeRef, Length@Hold@args] = $Failed;
 DeRef[arg1_, args__] /; Message[DeRef::argx, DeRef, Length@Hold@args] = $Failed;
