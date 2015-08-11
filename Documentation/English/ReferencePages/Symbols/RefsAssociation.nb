@@ -10,11 +10,11 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     19375,        671]
-NotebookOptionsPosition[     15040,        535]
-NotebookOutlinePosition[     17055,        588]
-CellTagsIndexPosition[     16970,        583]
-WindowTitle->Refs
+NotebookDataLength[     16388,        555]
+NotebookOptionsPosition[     12567,        440]
+NotebookOutlinePosition[     14675,        494]
+CellTagsIndexPosition[     14590,        489]
+WindowTitle->RefsAssociation
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -32,16 +32,15 @@ Cell[BoxData[GridBox[{
          TextCell[
           Row[{"See Also", 
             Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
-        StripOnInput->False], {"\<\"RefsAssociation\"\>":>
-       Documentation`HelpLookup[
-       "paclet:Ref/ref/RefsAssociation"], "\<\"Ref\"\>":>
-       Documentation`HelpLookup["paclet:Ref/ref/Ref"], "\<\"NewRef\"\>":>
-       Documentation`HelpLookup["paclet:Ref/ref/NewRef"], "\<\"EvalRef\"\>":>
-       Documentation`HelpLookup["paclet:Ref/ref/EvalRef"], "\<\"DeRef\"\>":>
-       Documentation`HelpLookup["paclet:Ref/ref/DeRef"], "\<\"UnRef\"\>":>
-       Documentation`HelpLookup["paclet:Ref/ref/UnRef"], "\<\"SetRef\"\>":>
-       Documentation`HelpLookup["paclet:Ref/ref/SetRef"], "\<\"RefBlock\"\>":>
-       Documentation`HelpLookup["paclet:Ref/ref/RefBlock"], "\<\"RefSetQ\"\>":>
+        StripOnInput->False], {"\<\"Refs\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/Refs"], "\<\"Ref\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/Ref"], "\<\"NewRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/NewRef"], "\<\"EvalRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/EvalRef"], "\<\"DeRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/DeRef"], "\<\"UnRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/UnRef"], "\<\"SetRef\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/SetRef"], "\<\"RefBlock\"\>":>Documentation`HelpLookup[
+       "paclet:Ref/ref/RefBlock"], "\<\"RefSetQ\"\>":>
        Documentation`HelpLookup["paclet:Ref/ref/RefSetQ"], "\<\"RefNullQ\"\>":>
        Documentation`HelpLookup["paclet:Ref/ref/RefNullQ"]},
        Appearance->None,
@@ -73,16 +72,21 @@ Cell[BoxData[GridBox[{
   }]], "AnchorBarGrid",
  CellID->1],
 
-Cell["Refs", "ObjectName"],
+Cell["RefsAssociation", "ObjectName"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[GridBox[{
    {"", Cell[TextData[{
      Cell[BoxData[
-      RowBox[{"Refs", "[", "]"}]], "InlineFormula"],
-     "\[LineSeparator] returns list of all non-null referencesis set in the \
-system."
+      RowBox[{"RefsAssociation", "[", "]"}]], "InlineFormula"],
+     "\[LineSeparator] returns ",
+     Cell[BoxData[
+      TemplateBox[{Cell[
+         TextData["Association"]],"paclet:ref/Association"},
+       "RefLink",
+       BaseStyle->"InlineFormula"]], "InlineFormula"],
+     " of all non-null referencesis set in the system with their bound values."
     }]]}
   }]], "Usage",
  GridBoxOptions->{
@@ -123,7 +127,7 @@ Cell["", "SectionHeaderSpacer"],
 
 Cell[TextData[{
  "To use ",
- Cell[BoxData["Refs"], "InlineFormula"],
+ Cell[BoxData["RefsAssociation"], "InlineFormula"],
  ", you first need to load the ",
  ButtonBox["Ref Package",
   BaseStyle->"Link",
@@ -141,43 +145,37 @@ Cell[TextData[{
 
 Cell[TextData[{
  Cell[BoxData[
-  RowBox[{"Refs", "[", "]"}]], "InlineFormula"],
- " gives a current list of non-null references. Cleared references using ",
+  RowBox[{"RefsAssociation", "[", "]"}]], "InlineFormula"],
+ " gives a current association of non-null references. Cleared references \
+using ",
  Cell[BoxData[
   TemplateBox[{Cell[
      TextData["UnRef"]],"paclet:Ref/ref/UnRef"},
    "RefLink",
    BaseStyle->"InlineFormula"]], "InlineFormula"],
- " are not included in the list."
+ " are not included."
 }], "Notes",
  CellID->22805182],
 
 Cell[TextData[{
- "One can use ",
+ Cell[BoxData[
+  RowBox[{"RefsAssociation", "[", "]"}]], "InlineFormula"],
+ " is an equivalent to ",
  Cell[BoxData[
   RowBox[{"AssociationMap", "[", 
-   RowBox[{"DeRef", ",", 
-    RowBox[{"Refs", "[", "]"}]}], "]"}]], "InlineFormula"],
- " to get the association of all references with their bound values."
+   RowBox[{
+    TemplateBox[{Cell[
+       TextData["DeRef"]],"paclet:Ref/ref/DeRef"},
+     "RefLink",
+     BaseStyle->"InlineFormula"], ",", 
+    RowBox[{
+     TemplateBox[{Cell[
+        TextData["Refs"]],"paclet:Ref/ref/Refs"},
+      "RefLink",
+      BaseStyle->"InlineFormula"], "[", "]"}]}], "]"}]], "InlineFormula"],
+ "."
 }], "Notes",
- CellID->745248683],
-
-Cell[TextData[{
- "Use ",
- Cell[BoxData[
-  TemplateBox[{Cell[
-     TextData["RefsAssociation"]],"paclet:Ref/ref/RefsAssociation"},
-   "RefLink",
-   BaseStyle->"InlineFormula"]], "InlineFormula"],
- " to get an ",
- Cell[BoxData[
-  TemplateBox[{Cell[
-     TextData["Association"]],"paclet:ref/Association"},
-   "RefLink",
-   BaseStyle->"InlineFormula"]], "InlineFormula"],
- " of references with their values."
-}], "Notes",
- CellID->419705542]
+ CellID->745248683]
 }, Open  ]]
 }, Open  ]],
 
@@ -227,8 +225,8 @@ Cell[BoxData[{
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"b", "=", 
   RowBox[{"NewRef", "[", "]"}]}], "\[IndentingNewLine]", 
- RowBox[{"Refs", "[", "]"}]}], "Input",
- CellLabel->"In[5]:=",
+ RowBox[{"RefsAssociation", "[", "]"}]}], "Input",
+ CellLabel->"In[2]:=",
  CellID->4310960],
 
 Cell[BoxData[
@@ -238,21 +236,21 @@ Cell[BoxData[
     RowBox[{"\<\"a\"\>", ",", "\<\"null\"\>", ",", "\<\"reference\"\>"}]], 
    "\[RightSkeleton]"}],
   Ref`Ref["a", "null", "reference"]]], "Output",
- CellLabel->"Out[5]=",
- CellID->90284182],
+ CellLabel->"Out[2]=",
+ CellID->337484801],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\[LeftSkeleton]", 
-   SubscriptBox["Ref", "4"], "\[RightSkeleton]"}],
-  Ref`Ref[Ref`Symbols`ref$4]]], "Output",
- CellLabel->"Out[6]=",
- CellID->89266116],
+   SubscriptBox["Ref", "1"], "\[RightSkeleton]"}],
+  Ref`Ref[Ref`Symbols`ref$1]]], "Output",
+ CellLabel->"Out[3]=",
+ CellID->292600360],
 
 Cell[BoxData[
- RowBox[{"{", "}"}]], "Output",
- CellLabel->"Out[7]=",
- CellID->365180810]
+ RowBox[{"\[LeftAssociation]", "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[4]=",
+ CellID->236688632]
 }, Open  ]],
 
 Cell["They are included once bound:", "ExampleText",
@@ -271,102 +269,9 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"c", "=", 
    RowBox[{"NewRef", "[", "Null", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"Refs", "[", "]"}]}], "Input",
- CellLabel->"In[8]:=",
+ RowBox[{"RefsAssociation", "[", "]"}]}], "Input",
+ CellLabel->"In[5]:=",
  CellID->390723314],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   InterpretationBox[
-    RowBox[{"\[LeftSkeleton]", 
-     SubscriptBox["Ref", "4"], "\[RightSkeleton]"}],
-    Ref`Ref[Ref`Symbols`ref$4]], ",", 
-   InterpretationBox[
-    RowBox[{"\[LeftSkeleton]", 
-     SubscriptBox["Ref", "5"], "\[RightSkeleton]"}],
-    Ref`Ref[Ref`Symbols`ref$5]], ",", 
-   InterpretationBox[
-    RowBox[{"\[LeftSkeleton]", 
-     SubscriptBox["Ref", 
-      RowBox[{"\<\"a\"\>", ",", "\<\"null\"\>", ",", "\<\"reference\"\>"}]], 
-     "\[RightSkeleton]"}],
-    Ref`Ref["a", "null", "reference"]]}], "}"}]], "Output",
- CellLabel->"Out[11]=",
- CellID->224843081]
-}, Open  ]],
-
-Cell["Values baund are:", "ExampleText",
- CellID->415316241],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{"EvalRef", "[", 
-  RowBox[{"Refs", "[", "]"}], "]"}], "\[IndentingNewLine]", 
- RowBox[{"DeRef", "/@", 
-  RowBox[{"Refs", "[", "]"}]}]}], "Input",
- CellLabel->"In[15]:=",
- CellID->365329282],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"42", ",", "Null", ",", "\<\"A non-null reference\"\>"}], 
-  "}"}]], "Output",
- CellLabel->"Out[15]=",
- CellID->151130298],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"42", ",", "Null", ",", "\<\"A non-null reference\"\>"}], 
-  "}"}]], "Output",
- CellLabel->"Out[16]=",
- CellID->70958307]
-}, Open  ]],
-
-Cell[TextData[{
- Cell[BoxData[
-  TemplateBox[{Cell[
-     TextData["RefBlock"]],"paclet:Ref/ref/RefBlock"},
-   "RefLink",
-   BaseStyle->"InlineFormula"]], "InlineFormula"],
- " localizes creation of references; rebindings are still visible outside:"
-}], "ExampleText",
- CellID->409050283],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{"RefBlock", "[", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"x", "=", 
-     RowBox[{"NewRef", "[", "8", "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"!", "c"}], "=", "\"\<New value\>\""}], ";", 
-    "\[IndentingNewLine]", 
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"!", "a"}], ",", 
-      RowBox[{"!", "b"}], ",", 
-      RowBox[{"!", "c"}], ",", 
-      RowBox[{"!", "x"}], ",", 
-      RowBox[{"!", 
-       RowBox[{"NewRef", "[", "\"\<XXX\>\"", "]"}]}]}], "}"}]}]}], 
-  "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
- RowBox[{"AssociationMap", "[", 
-  RowBox[{"DeRef", ",", 
-   RowBox[{"Refs", "[", "]"}]}], "]"}]}], "Input",
- CellLabel->"In[22]:=",
- CellID->826687291],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"\<\"A non-null reference\"\>", ",", "42", ",", "\<\"New value\"\>",
-    ",", "8", ",", "\<\"XXX\"\>"}], "}"}]], "Output",
- CellLabel->"Out[22]=",
- CellID->504311318],
 
 Cell[BoxData[
  RowBox[{"\[LeftAssociation]", 
@@ -374,13 +279,13 @@ Cell[BoxData[
    RowBox[{
     InterpretationBox[
      RowBox[{"\[LeftSkeleton]", 
-      SubscriptBox["Ref", "4"], "\[RightSkeleton]"}],
-     Ref`Ref[Ref`Symbols`ref$4]], "\[Rule]", "42"}], ",", 
+      SubscriptBox["Ref", "1"], "\[RightSkeleton]"}],
+     Ref`Ref[Ref`Symbols`ref$1]], "\[Rule]", "42"}], ",", 
    RowBox[{
     InterpretationBox[
      RowBox[{"\[LeftSkeleton]", 
-      SubscriptBox["Ref", "5"], "\[RightSkeleton]"}],
-     Ref`Ref[Ref`Symbols`ref$5]], "\[Rule]", "\<\"New value\"\>"}], ",", 
+      SubscriptBox["Ref", "2"], "\[RightSkeleton]"}],
+     Ref`Ref[Ref`Symbols`ref$2]], "\[Rule]", "Null"}], ",", 
    RowBox[{
     InterpretationBox[
      RowBox[{"\[LeftSkeleton]", 
@@ -390,8 +295,8 @@ Cell[BoxData[
      Ref`Ref["a", "null", "reference"]], 
     "\[Rule]", "\<\"A non-null reference\"\>"}]}], 
   "\[RightAssociation]"}]], "Output",
- CellLabel->"Out[23]=",
- CellID->61600439]
+ CellLabel->"Out[8]=",
+ CellID->18336356]
 }, Open  ]]
 }, Open  ]],
 
@@ -417,7 +322,7 @@ Cell[TextData[{
 Cell[TextData[{
  Cell[BoxData[
   TemplateBox[{Cell[
-     TextData["RefsAssociation"]],"paclet:Ref/ref/RefsAssociation"},
+     TextData["Refs"]],"paclet:Ref/ref/Refs"},
    "RefLink",
    BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
  "\[NonBreakingSpace]",
@@ -537,7 +442,7 @@ Saveable->False,
 ScreenStyleEnvironment->"Working",
 WindowSize->{725, 750},
 WindowMargins->{{353, Automatic}, {4, Automatic}},
-WindowTitle->"Refs",
+WindowTitle->"RefsAssociation",
 DockedCells->FEPrivate`FrontEndResource[
  "FEExpressions", "HelpViewerToolbar"],
 TaggingRules->{
@@ -550,15 +455,16 @@ TaggingRules->{
     Left], "HasOptions" -> False, "ExampleCounter" -> 1, 
   "ExamplePageLinks" -> {}, "NeedPlatMsgIn" -> None, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2015, 8, 6, 14, 28, 0}", "history" -> {"XX", "", "", ""}, 
+   "built" -> "{2015, 8, 11, 21, 31, 0}", "history" -> {"XX", "", "", ""}, 
     "context" -> "Ref`", 
-    "keywords" -> {"Refs", "list of references", "pointer"}, 
+    "keywords" -> {"RefsAssociation", "association of references"}, 
     "specialkeywords" -> {}, "tutorialcollectionlinks" -> {}, "index" -> True,
      "label" -> "Ref Package Symbol", "language" -> "en", "paclet" -> 
     "Ref Package", "status" -> "None", "summary" -> 
-    "Refs[] returns list of references", "synonyms" -> {}, "title" -> "Refs", 
-    "titlemodifier" -> "", "windowtitle" -> "Refs", "type" -> "Symbol", "uri" -> 
-    "Ref/ref/Refs"}, "SearchTextTranslated" -> ""},
+    "RefsAssociation[] returns association of references with their values", 
+    "synonyms" -> {}, "title" -> "RefsAssociation", "titlemodifier" -> "", 
+    "windowtitle" -> "RefsAssociation", "type" -> "Symbol", "uri" -> 
+    "Ref/ref/RefsAssociation"}, "SearchTextTranslated" -> ""},
 FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
 StyleDefinitions->Notebook[{
    Cell[
@@ -575,104 +481,82 @@ StyleDefinitions->Notebook[{
 (*CellTagsOutline
 CellTagsIndex->{
  "PrimaryExamplesSection"->{
-  Cell[5590, 185, 387, 15, 36, "PrimaryExamplesSection",
+  Cell[5630, 183, 387, 15, 36, "PrimaryExamplesSection",
    CellTags->"PrimaryExamplesSection",
    CellID->575750790]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"PrimaryExamplesSection", 16827, 576}
+ {"PrimaryExamplesSection", 14447, 482}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[576, 21, 2215, 52, 54, "AnchorBarGrid",
+Cell[587, 21, 2185, 51, 54, "AnchorBarGrid",
  CellID->1],
-Cell[2794, 75, 26, 0, 49, "ObjectName"],
+Cell[2775, 74, 37, 0, 49, "ObjectName"],
 Cell[CellGroupData[{
-Cell[2845, 79, 382, 12, 93, "Usage",
+Cell[2837, 78, 598, 17, 96, "Usage",
  CellID->4931],
 Cell[CellGroupData[{
-Cell[3252, 95, 730, 24, 36, "NotesSection",
+Cell[3460, 99, 730, 24, 36, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
  CellID->1],
-Cell[3985, 121, 31, 0, 14, "SectionHeaderSpacer"],
-Cell[4019, 123, 434, 16, 37, "Notes",
+Cell[4193, 125, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[4227, 127, 445, 16, 37, "Notes",
  CellID->167050482],
-Cell[4456, 141, 371, 11, 55, "Notes",
+Cell[4675, 145, 379, 12, 58, "Notes",
  CellID->22805182],
-Cell[4830, 154, 270, 8, 55, "Notes",
- CellID->745248683],
-Cell[5103, 164, 438, 15, 37, "Notes",
- CellID->419705542]
+Cell[5057, 159, 524, 18, 37, "Notes",
+ CellID->745248683]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5590, 185, 387, 15, 36, "PrimaryExamplesSection",
+Cell[5630, 183, 387, 15, 36, "PrimaryExamplesSection",
  CellTags->"PrimaryExamplesSection",
  CellID->575750790],
 Cell[CellGroupData[{
-Cell[6002, 204, 194, 6, 27, "ExampleSection",
+Cell[6042, 202, 194, 6, 27, "ExampleSection",
  CellID->82214148],
-Cell[6199, 212, 47, 0, 38, "ExampleText"],
-Cell[6249, 214, 92, 2, 32, "Input"],
-Cell[6344, 218, 62, 0, 38, "ExampleText"],
+Cell[6239, 210, 47, 0, 38, "ExampleText"],
+Cell[6289, 212, 92, 2, 32, "Input"],
+Cell[6384, 216, 62, 0, 38, "ExampleText"],
 Cell[CellGroupData[{
-Cell[6431, 222, 326, 9, 75, "Input",
+Cell[6471, 220, 337, 9, 75, "Input",
  CellID->4310960],
-Cell[6760, 233, 279, 8, 43, "Output",
- CellID->90284182],
-Cell[7042, 243, 198, 6, 43, "Output",
- CellID->89266116],
-Cell[7243, 251, 88, 3, 43, "Output",
- CellID->365180810]
+Cell[6811, 231, 280, 8, 43, "Output",
+ CellID->337484801],
+Cell[7094, 241, 199, 6, 43, "Output",
+ CellID->292600360],
+Cell[7296, 249, 123, 3, 43, "Output",
+ CellID->236688632]
 }, Open  ]],
-Cell[7346, 257, 72, 1, 38, "ExampleText",
+Cell[7434, 255, 72, 1, 38, "ExampleText",
  CellID->139755158],
 Cell[CellGroupData[{
-Cell[7443, 262, 407, 13, 96, "Input",
+Cell[7531, 260, 418, 13, 96, "Input",
  CellID->390723314],
-Cell[7853, 277, 620, 18, 43, "Output",
- CellID->224843081]
-}, Open  ]],
-Cell[8488, 298, 60, 1, 38, "ExampleText",
- CellID->415316241],
-Cell[CellGroupData[{
-Cell[8573, 303, 213, 6, 54, "Input",
- CellID->365329282],
-Cell[8789, 311, 161, 5, 43, "Output",
- CellID->151130298],
-Cell[8953, 318, 160, 5, 43, "Output",
- CellID->70958307]
-}, Open  ]],
-Cell[9128, 326, 286, 8, 41, "ExampleText",
- CellID->409050283],
-Cell[CellGroupData[{
-Cell[9439, 338, 739, 23, 117, "Input",
- CellID->826687291],
-Cell[10181, 363, 205, 5, 43, "Output",
- CellID->504311318],
-Cell[10389, 370, 810, 23, 43, "Output",
- CellID->61600439]
+Cell[7952, 275, 796, 23, 43, "Output",
+ CellID->18336356]
 }, Open  ]]
 }, Open  ]],
-Cell[11226, 397, 31, 0, 31, "SectionFooterSpacer"]
+Cell[8775, 302, 31, 0, 31, "SectionFooterSpacer"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11294, 402, 265, 12, 36, "SeeAlsoSection",
+Cell[8843, 307, 265, 12, 36, "SeeAlsoSection",
  CellID->21447],
-Cell[11562, 416, 2925, 88, 84, "SeeAlso",
+Cell[9111, 321, 2903, 88, 82, "SeeAlso",
  CellID->1084]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14524, 509, 277, 12, 36, "MoreAboutSection",
+Cell[12051, 414, 277, 12, 36, "MoreAboutSection",
  CellID->169421678],
-Cell[14804, 523, 31, 0, 14, "SectionHeaderSpacer"],
-Cell[14838, 525, 160, 5, 23, "MoreAbout",
+Cell[12331, 428, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[12365, 430, 160, 5, 23, "MoreAbout",
  CellID->1]
 }, Open  ]],
-Cell[15013, 533, 23, 0, 47, "FooterCell"]
+Cell[12540, 438, 23, 0, 47, "FooterCell"]
 }
 ]
 *)

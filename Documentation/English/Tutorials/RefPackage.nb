@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     45632,       1579]
-NotebookOptionsPosition[     34974,       1221]
-NotebookOutlinePosition[     39400,       1347]
-CellTagsIndexPosition[     39202,       1337]
+NotebookDataLength[     44446,       1536]
+NotebookOptionsPosition[     34008,       1186]
+NotebookOutlinePosition[     38433,       1312]
+CellTagsIndexPosition[     38235,       1302]
 WindowTitle->Ref Package Tutorial
 WindowFrame->Normal*)
 
@@ -916,41 +916,6 @@ Cell["With values:", "MathCaption",
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"AssociationMap", "[", 
-  RowBox[{"DeRef", ",", 
-   RowBox[{"Refs", "[", "]"}]}], "]"}]], "Input",
- CellLabel->"In[16]:=",
- CellID->748814853],
-
-Cell[BoxData[
- RowBox[{"\[LeftAssociation]", 
-  RowBox[{
-   RowBox[{
-    InterpretationBox[
-     RowBox[{"\[LeftSkeleton]", 
-      SubscriptBox["Ref", "3"], "\[RightSkeleton]"}],
-     Ref`Ref[Ref`Symbols`ref$3]], "\[Rule]", "\<\"val\"\>"}], ",", 
-   RowBox[{
-    InterpretationBox[
-     RowBox[{"\[LeftSkeleton]", 
-      SubscriptBox["Ref", "4"], "\[RightSkeleton]"}],
-     Ref`Ref[Ref`Symbols`ref$4]], "\[Rule]", "\<\"val\"\>"}], ",", 
-   RowBox[{
-    InterpretationBox[
-     RowBox[{"\[LeftSkeleton]", 
-      SubscriptBox["Ref", "6"], "\[RightSkeleton]"}],
-     Ref`Ref[Ref`Symbols`ref$6]], "\[Rule]", "0"}]}], 
-  "\[RightAssociation]"}]], "Output",
- CellLabel->"Out[16]=",
- CellID->229119418]
-}, Open  ]],
-
-Cell["Or, undocumented yet:", "MathCaption",
- CellID->85118368],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
  RowBox[{"RefsAssociation", "[", "]"}]], "Input",
  CellLabel->"In[17]:=",
  CellID->48082670],
@@ -1309,6 +1274,9 @@ StyleDefinitions->Notebook[{
 (* Internal cache information *)
 (*CellTagsOutline
 CellTagsIndex->{
+ "WhatIs"->{
+  Cell[5050, 142, 60, 1, 71, "Section",
+   CellTags->"WhatIs"]},
  "Access"->{
   Cell[8947, 283, 88, 2, 71, "Section",
    CellTags->"Access",
@@ -1317,10 +1285,6 @@ CellTagsIndex->{
   Cell[15428, 497, 79, 2, 71, "Section",
    CellTags->"NewRef",
    CellID->477014951]},
- "RefBlock"->{
-  Cell[28880, 1002, 84, 2, 71, "Section",
-   CellTags->"RefBlock",
-   CellID->78802911]},
  "RefQ"->{
   Cell[21442, 717, 67, 2, 71, "Section",
    CellTags->"RefQ",
@@ -1329,19 +1293,20 @@ CellTagsIndex->{
   Cell[24976, 850, 95, 2, 71, "Section",
    CellTags->"Refs",
    CellID->295104336]},
- "WhatIs"->{
-  Cell[5050, 142, 60, 1, 71, "Section",
-   CellTags->"WhatIs"]}
+ "RefBlock"->{
+  Cell[27914, 967, 84, 2, 71, "Section",
+   CellTags->"RefBlock",
+   CellID->78802911]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Access", 38614, 1311},
- {"NewRef", 38714, 1315},
- {"RefBlock", 38817, 1319},
- {"RefQ", 38918, 1323},
- {"Refs", 39015, 1327},
- {"WhatIs", 39114, 1331}
+ {"WhatIs", 37648, 1276},
+ {"Access", 37726, 1279},
+ {"NewRef", 37826, 1283},
+ {"RefQ", 37925, 1287},
+ {"Refs", 38022, 1291},
+ {"RefBlock", 38123, 1295}
  }
 *)
 (*NotebookFileOutline
@@ -1511,76 +1476,68 @@ Cell[26010, 893, 535, 16, 43, "Output",
 Cell[26560, 912, 54, 1, 36, "MathCaption",
  CellID->51638387],
 Cell[CellGroupData[{
-Cell[26639, 917, 165, 5, 32, "Input",
- CellID->748814853],
-Cell[26807, 924, 695, 20, 43, "Output",
- CellID->229119418]
-}, Open  ]],
-Cell[27517, 947, 63, 1, 36, "MathCaption",
- CellID->85118368],
-Cell[CellGroupData[{
-Cell[27605, 952, 106, 3, 32, "Input",
+Cell[26639, 917, 106, 3, 32, "Input",
  CellID->48082670],
-Cell[27714, 957, 695, 20, 43, "Output",
+Cell[26748, 922, 695, 20, 43, "Output",
  CellID->132413900]
 }, Open  ]],
-Cell[28424, 980, 120, 2, 35, "Text",
+Cell[27458, 945, 120, 2, 35, "Text",
  CellID->117611201],
 Cell[CellGroupData[{
-Cell[28569, 986, 170, 5, 54, "Input",
+Cell[27603, 951, 170, 5, 54, "Input",
  CellID->399452560],
-Cell[28742, 993, 89, 3, 43, "Output",
+Cell[27776, 958, 89, 3, 43, "Output",
  CellID->564778379]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28880, 1002, 84, 2, 71, "Section",
+Cell[27914, 967, 84, 2, 71, "Section",
  CellTags->"RefBlock",
  CellID->78802911],
-Cell[28967, 1006, 676, 13, 100, "Text",
+Cell[28001, 971, 676, 13, 100, "Text",
  CellID->698844083],
-Cell[29646, 1021, 1951, 55, 122, "Text"],
-Cell[31600, 1078, 1289, 43, 96, "DefinitionBox",
+Cell[28680, 986, 1951, 55, 122, "Text"],
+Cell[30634, 1043, 1289, 43, 96, "DefinitionBox",
  CellID->505853842],
-Cell[32892, 1123, 58, 1, 36, "Caption",
+Cell[31926, 1088, 58, 1, 36, "Caption",
  CellID->135701721],
 Cell[CellGroupData[{
-Cell[32975, 1128, 237, 8, 32, "Input",
+Cell[32009, 1093, 237, 8, 32, "Input",
  CellID->136083642],
-Cell[33215, 1138, 72, 2, 43, "Output",
+Cell[32249, 1103, 72, 2, 43, "Output",
  CellID->87673025]
 }, Open  ]],
-Cell[33302, 1143, 108, 2, 36, "MathCaption",
+Cell[32336, 1108, 108, 2, 36, "MathCaption",
  CellID->371882750],
 Cell[CellGroupData[{
-Cell[33435, 1149, 96, 3, 32, "Input",
+Cell[32469, 1114, 96, 3, 32, "Input",
  CellID->320627609],
-Cell[33534, 1154, 89, 3, 43, "Output",
+Cell[32568, 1119, 89, 3, 43, "Output",
  CellID->362042022]
 }, Open  ]],
-Cell[33638, 1160, 75, 1, 36, "MathCaption",
+Cell[32672, 1125, 75, 1, 36, "MathCaption",
  CellID->70408651],
 Cell[CellGroupData[{
-Cell[33738, 1165, 460, 15, 75, "Input",
+Cell[32772, 1130, 460, 15, 75, "Input",
  CellID->42913915],
-Cell[34201, 1182, 73, 2, 43, "Output",
+Cell[33235, 1147, 73, 2, 43, "Output",
  CellID->380139280]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34311, 1189, 107, 3, 32, "Input",
+Cell[33345, 1154, 107, 3, 32, "Input",
  CellID->223965006],
-Cell[34421, 1194, 300, 9, 43, "Output",
+Cell[33455, 1159, 300, 9, 43, "Output",
  CellID->435335638]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34770, 1209, 50, 1, 71, "Section",
+Cell[33804, 1174, 50, 1, 71, "Section",
  CellID->342949783],
-Cell[34823, 1212, 97, 3, 32, "Input",
+Cell[33857, 1177, 97, 3, 32, "Input",
  CellID->103589350]
 }, Open  ]]
 }, Open  ]],
-Cell[34947, 1219, 23, 0, 47, "FooterCell"]
+Cell[33981, 1184, 23, 0, 47, "FooterCell"]
 }
 ]
 *)

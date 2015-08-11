@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8149,        273]
-NotebookOptionsPosition[      6089,        214]
-NotebookOutlinePosition[      7527,        251]
-CellTagsIndexPosition[      7484,        248]
+NotebookDataLength[      8558,        283]
+NotebookOptionsPosition[      6498,        224]
+NotebookOutlinePosition[      7936,        261]
+CellTagsIndexPosition[      7893,        258]
 WindowTitle->Ref Package
 WindowFrame->Normal*)
 
@@ -38,8 +38,10 @@ Cell[BoxData[GridBox[{
        "paclet:Ref/ref/EvalRef"], "\<\"UnRef\"\>":>Documentation`HelpLookup[
        "paclet:Ref/ref/UnRef"], "\<\"SetRef\"\>":>Documentation`HelpLookup[
        "paclet:Ref/ref/SetRef"], "\<\"Refs\"\>":>Documentation`HelpLookup[
-       "paclet:Ref/ref/Refs"], "\<\"RefBlock\"\>":>Documentation`HelpLookup[
-       "paclet:Ref/ref/RefBlock"], "\<\"RefSetQ\"\>":>
+       "paclet:Ref/ref/Refs"], "\<\"RefsAssociation\"\>":>
+       Documentation`HelpLookup[
+       "paclet:Ref/ref/RefsAssociation"], "\<\"RefBlock\"\>":>
+       Documentation`HelpLookup["paclet:Ref/ref/RefBlock"], "\<\"RefSetQ\"\>":>
        Documentation`HelpLookup["paclet:Ref/ref/RefSetQ"], "\<\"RefNullQ\"\>":>
        Documentation`HelpLookup["paclet:Ref/ref/RefNullQ"]},
        Appearance->None,
@@ -202,10 +204,18 @@ Cell[TextData[{
      TextData["Refs"]],"paclet:Ref/ref/Refs"},
    "RefLink",
    BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RefsAssociation"]],"paclet:Ref/ref/RefsAssociation"},
+   "RefLink",
+   BaseStyle->"InlineFunctionSans"]], "InlineFunctionSans"],
  " ",
  StyleBox["\[LongDash]", "GuideEmDash"],
- " ",
- "get list of all existing references"
+ " get list/association of all existing references"
 }], "GuideText",
  CellID->18467161],
 
@@ -250,30 +260,30 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[583, 21, 2025, 48, 54, "AnchorBarGrid",
+Cell[583, 21, 2128, 50, 54, "AnchorBarGrid",
  CellID->1],
 Cell[CellGroupData[{
-Cell[2633, 73, 53, 1, 54, "GuideTitle",
+Cell[2736, 75, 53, 1, 54, "GuideTitle",
  CellID->942062912],
-Cell[2689, 76, 287, 11, 25, "GuideText",
+Cell[2792, 78, 287, 11, 25, "GuideText",
  CellID->203374175],
-Cell[2979, 89, 294, 11, 25, "GuideText",
+Cell[3082, 91, 294, 11, 25, "GuideText",
  CellID->698877281],
-Cell[3276, 102, 323, 11, 25, "GuideText",
+Cell[3379, 104, 323, 11, 25, "GuideText",
  CellID->55640909],
-Cell[3602, 115, 456, 17, 25, "GuideText",
+Cell[3705, 117, 456, 17, 25, "GuideText",
  CellID->455608],
-Cell[4061, 134, 402, 14, 27, "GuideText",
+Cell[4164, 136, 402, 14, 27, "GuideText",
  CellID->779452762],
-Cell[4466, 150, 312, 11, 25, "GuideText",
+Cell[4569, 152, 312, 11, 25, "GuideText",
  CellID->293476231],
-Cell[4781, 163, 603, 20, 25, "GuideText",
+Cell[4884, 165, 603, 20, 25, "GuideText",
  CellID->208069134],
-Cell[5387, 185, 348, 11, 25, "GuideText",
+Cell[5490, 187, 348, 11, 25, "GuideText",
  CellID->176634893],
-Cell[5738, 198, 301, 11, 25, "GuideText",
+Cell[5841, 200, 607, 19, 25, "GuideText",
  CellID->18467161],
-Cell[6042, 211, 31, 0, 31, "SectionFooterSpacer"]
+Cell[6451, 221, 31, 0, 31, "SectionFooterSpacer"]
 }, Open  ]]
 }
 ]
